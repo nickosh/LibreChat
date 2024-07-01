@@ -36,9 +36,9 @@ services:
       - api
     restart: always
     volumes:
-        - type: bind
+      - type: bind
         source: ./client/nginx.conf
-        target: /etc/nginx/conf.d/default.conf
+        target: /etc/nginx/conf.d/default.conff
   mongodb:
     container_name: chat-mongodb
     # ports:  # Uncomment this to access mongodb from outside docker, not safe in deployment
