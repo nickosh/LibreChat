@@ -5,7 +5,7 @@ services:
     #   context: .
     #   dockerfile: Dockerfile.multi
     #   target: api-build
-    image: ghcr.io/danny-avila/librechat-dev-api:${API_VERSION:-latest}
+    image: ghcr.io/danny-avila/librechat:${API_VERSION:-latest}
     container_name: LibreChat-API
     ports:
       - ${PORT:-3080}:${PORT:-3080}
