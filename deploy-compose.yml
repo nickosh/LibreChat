@@ -5,10 +5,10 @@ services:
     #   context: .
     #   dockerfile: Dockerfile.multi
     #   target: api-build
-    image: ghcr.io/danny-avila/librechat-dev-api:latest
+    image: ghcr.io/danny-avila/librechat-dev-api:${API_VERSION:-latest}
     container_name: LibreChat-API
     ports:
-      - 3080:3080
+      - ${PORT:-3080}:${PORT:-3080}
     depends_on:
       - mongodb
       - rag_api
